@@ -9,25 +9,39 @@
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *nn = *head, *nnn;
+	listint_t *eslam;
+	listint_t *alaa;
+	listint_t *esraa;
 
-	nnn = malloc(sizeof(listint_t));
-	if (nnn == NULL)
+	alaa = *head;
+	eslam = malloc(sizeof(listint_t));
+
+	if (eslam == NULL)
 		return (NULL);
-	nnn->n = number;
 
-	if (nn == NULL || nn->n >= number)
+	while (alaa != NULL)
 	{
-		nnn->next = nn;
-		*head = nnn;
-		return (nnn);
+		if (alaa->n > number)
+			break;
+		esraa = alaa;
+		alaa = alaa->next;
 	}
 
-	while (nn && nn->next && nn->next->n < number)
-		nn = nn->next;
+	eslam->n = number;
 
-	nnn->next = nn->next;
-	nn->next = nnn;
+	if (*head == NULL)
+	{
+		eslam->next = NULL;
+		*head = eslam;
+	}
+	else
+	{
+		eslam->next = alaa;
+		if (alaa == *head)
+			*head = eslam;
+		else
+			esraa->next = eslam;
+	}
 
-	return (nnn);
+	return (eslam);
 }
