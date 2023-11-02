@@ -4,8 +4,8 @@ import sys
 
 if __name__ == '__main__':
     argv = sys.argv[1:]
-    z = len(argv)
-    if z != 3:
+    x = len(argv)
+    if x != 3:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
     elif sys.argv[2] not in '+-*/':
