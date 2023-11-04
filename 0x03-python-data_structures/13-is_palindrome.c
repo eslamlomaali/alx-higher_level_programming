@@ -2,13 +2,13 @@
 
 /**
  * reverse - reverses a linked list
- * @h: pointer
+ * @head: pointer
  * Return: pointer
  */
-void reverse(listint_t **h)
+void reverse(listint_t **head)
 {
 	listint_t *old = NULL;
-	listint_t *pre = *h;
+	listint_t *pre = *head;
 	listint_t *fut = NULL;
 
 	while (pre)
@@ -19,7 +19,7 @@ void reverse(listint_t **h)
 		pre = fut;
 	}
 
-	*h = old;
+	*head = old;
 }
 
 /**
