@@ -1,26 +1,26 @@
 #include "lists.h"
 
 /**
- * reverse_listint - reverses a linked list
+ * reverse - reverses a linked list
  * @head: pointer to the first node in the list
  *
  * Return: pointer to the first node in the new list
  */
-void reverse_listint(listint_t **head)
+void reverse(listint_t **head)
 {
-	listint_t *prev = NULL;
-	listint_t *current = *head;
-	listint_t *next = NULL;
+	listint_t *old = NULL;
+	listint_t *pre = *head;
+	listint_t *fut = NULL;
 
-	while (current)
+	while (pre)
 	{
-		next = current->next;
-		current->next = prev;
-		prev = current;
-		current = next;
+		fut = pre->fut;
+		pre->fut = old;
+		old = pre;
+		pre = fut;
 	}
 
-	*head = prev;
+	*head = old;
 }
 
 /**
@@ -52,7 +52,7 @@ int is_palindrome(listint_t **head)
 		slow = slow->next;
 	}
 
-	reverse_listint(&dup);
+	reverse(&dup);
 
 	while (dup && temp)
 	{
