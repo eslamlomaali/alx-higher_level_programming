@@ -9,7 +9,7 @@ class Square:
         """define a new Square.
 
         Args:
-            size (int): The len of the side of square.
+            size (int): The length of the side of square.
         """
         if not isinstance(size, int):
             raise TypeError("size must be an intger")
