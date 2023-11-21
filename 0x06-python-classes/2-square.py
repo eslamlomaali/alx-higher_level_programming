@@ -12,7 +12,7 @@ class Square:
             size (int): The len of the side of square.
         """
         if not isinstance(size, int):
-            raise TypeError("size must be intger")
+            raise TypeError("size must be an intger")
         if size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
