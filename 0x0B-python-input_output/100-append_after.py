@@ -11,4 +11,4 @@ def append_after(filename="", search_string="", new_string=""):
             if search_string in l:
                 t += new_string
     with open(filename, "w") as fille2:
-        fille2.write(text)
+        fille2.write(t)
