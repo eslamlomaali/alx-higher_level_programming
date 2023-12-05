@@ -3,7 +3,8 @@
 
 
 def append_after(filename="", search_string="", new_string=""):
-    """Inserts text after each line"""
+    """Inserts text after each line
+    """
     t = ""
     with open(filename) as fille:
         for l in fille:
