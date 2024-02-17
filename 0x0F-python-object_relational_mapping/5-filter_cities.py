@@ -16,7 +16,7 @@ if __name__ == "__main__":
                 cities INNER JOIN states ON states.id=cities.state_id
                 WHERE states.name=%s""", (sys.argv[4],))
     rs = current.fetchall()
-    def = list(r[0] for r in rs)
-    print(*def, rb=", ")
+    def = list(row[0] for r in rs)
+    print(*def, sep=", ")
     current.close()
     db.close()
