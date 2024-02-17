@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-Write a script that takes in an argument and displays
-all values in the states tableof hbtn_0e_0_usa where
-name matches the argument
+Your script should take 4 arguments: mysql username, mysql password,
+database name and state name searched
+(no argument validation needed)
 
 """
 import MySQLdb
