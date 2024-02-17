@@ -13,8 +13,8 @@ if __name__ == "__main__":
         password=argv[2], database=argv[3])
     cur = connectaion.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC")
-    daba = cur.fetchall()
-    for x in daba:
+    db = cur.fetchall()
+    for x in db:
         print(x)
     cur.close()
-    daba.close()
+    db.close()
